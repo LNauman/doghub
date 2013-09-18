@@ -1,0 +1,32 @@
+<h1>All The Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Subject</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @staff_contact.each do |staff_contact| %>
+      <tr>
+        <td><%= staff_contact.first_name %></td>
+        <td><%= staff_contact.last_name %></td>
+        <td><%= staff_contact.email %></td>
+        <td><%= staff_contact.subject %></td>
+        <td><%= staff_contact.description %></td>
+       
+        <td><%= link_to 'Delete', staff_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Staff Contact', new_staff_contact_path %>
+

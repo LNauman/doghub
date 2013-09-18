@@ -1,0 +1,30 @@
+<%= form_for @staff_contact do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div>  
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>  
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  
+  <%= f.submit 'Submit Contact' %>
+
+<%- end -%>
